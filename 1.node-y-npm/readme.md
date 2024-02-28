@@ -1,8 +1,5 @@
 # Node y npm
-Game description
+Introducción a Node y NPM
 
 ## Instalación
 ```npm install```
-
-## Launching the game
-```npm start```
