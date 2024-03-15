@@ -1,8 +1,15 @@
+let personajes = []
+
 fetch('https://hp-api.onrender.com/api/characters')
 .then(response => response.json())
-.then((personajes) => {
-	const contenedor = document.querySelector('#personajes')
+.then((resultados) => {
+	personajes = resultados
+	dibujarPersonajes(personajes)
+})
 
+function dibujarPersonajes(personajes){
+	const contenedor = document.querySelector('#personajes')
+	contenedor.innerHTML = ""
 	for(let i=0; i < personajes.length; i++){
 
 		let color = "" 
@@ -32,5 +39,36 @@ fetch('https://hp-api.onrender.com/api/characters')
 
 		contenedor.append(col)
 	}
+}
+
+function buscar(){
+	const termino = document.getElementById("termino").value.toLowerCase()
+	const busqueda = personajes.filter((personaje)=>{
+		return personaje.name.toLowerCase().includes(termino)
+	})
+	dibujarPersonajes(busqueda)
+}
+
+function casa(){
+	const busqueda = personajes.filter((personaje)=>{
+		return personaje.house == 'Gryffindor'
+	})
+	dibujarPersonajes(busqueda)
+}
+
+const formulario = document.getElementById("busqueda")
+formulario.addEventListener("submit", (evt)=>{
+	evt.preventDefault()
+	buscar()
 })
+
+const input = document.getElementById("termino")
+input.addEventListener("keyup", buscar)
+
+const boton = document.getElementById("gryffindor")
+boton.addEventListener("click", casa)
+
+
+
+
 

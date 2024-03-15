@@ -13,3 +13,13 @@
 .azul{
 	background-color: rgb(23, 23, 126) !important;
 }
+
+.card{
+	margin-top: 20px;
+}
+
+img{
+	width: 100%;
+	height: 450px;
+	object-fit: cover;
+}
