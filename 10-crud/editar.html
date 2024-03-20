@@ -9,31 +9,30 @@
 	<body>
 		<nav class="navbar bg-primary navbar-expand-lg">
 			<div class="container-fluid">
-			  <a class="navbar-brand" href="/">Frutas</a>
+			  <a class="navbar-brand" href="index.html">Frutas</a>
 			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
 				  <a class="nav-link active" aria-current="page" href="agregar.html">Agregar</a>
-
+	
 				</div>
 			  </div>
 			</div>
 		</nav>
 		<div class="container">
-			<table class="table">
-				<tr>
-					<td>ID</td>
-					<th>Fruta</th>
-					<th>Color</th>
-					<th>Acciones</th>
-				</tr>
-				<tbody id="contenedor">
-					
-				</tbody>
-			</table>
+			<h1 id="titulo">Editar fruta</h1>
+			<div class="mb-3">
+				<label class="label">Nombre</label>
+				<input type="text" placeholder="Ingresa un nombre" name="nombre" id="nombre" class="form-control">
+			</div>
+			<div class="mb-3">
+				<label class="label">Color</label>
+				<input type="text" placeholder="Ingresa un color" name="color" id="color" class="form-control">
+			</div>
+			<button id="boton" type="button" class="btn btn-primary">Editar fruta</button>
 		</div>
-		<script src="index.js"></script>
+		<script src="editar.js"></script>
 	</body>
 </html>
