@@ -1,6 +1,6 @@
 function agregarFruta(datos){
 
-	const url = 'https://crudcrud.com/api/d43b0177569948ffbf456e7c4ea9415e/frutas'
+	const url = 'https://crudcrud.com/api/7ded2eabd36a4294b832da9d60cf4a31/frutas'
 	fetch(url, {
 		method: 'POST',
 		body: JSON.stringify(datos),
